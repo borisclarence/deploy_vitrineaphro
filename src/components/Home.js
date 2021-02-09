@@ -29,6 +29,9 @@ import AboutPic  from "../assets/ondesk.jpg";
 import TextField from '@material-ui/core/TextField';
 import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
+
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -83,10 +86,10 @@ const BodyHome = () => {
   const classes = useStyles();
 
   return (
-    <main>  
+    <main>
         <div className={classes.heroContent} style={{ backgroundColor: "lightblue", }}>
           <Container maxWidth="sm">
-            
+
             <Grid container spacing={4} >
               <Grid item xs={12} sm={5} >
                 <img src={ImgHomeFile} alt="HomePicture" style={{width: '12vw', }} />
@@ -96,7 +99,9 @@ const BodyHome = () => {
                   Bienvenue sur Afro
                 </Typography>
                 <Typography variant="h6" align="justify" color="textSecondary" style={{width: '40vw', }} paragraph>
-                  Aphro est la première application de placements de meubles depuis votre téléphone
+                  {/*Aphro est la première application de placements de meubles depuis votre téléphone*/}
+                  Aphro est une application AR permettant la création de decoration d'intérieur et le partage de ces dernière grâce à une web app.
+                  Il permet ainsi aux agents immobiliers, particuliers ou decorateurs d'intérieurs de partager leur vision d'un nouvel environement.
                 </Typography>
                 <div className={classes.heroButtons}>
                   <Grid container spacing={2} justify="center" style={{width: '35vw', }}>
@@ -119,42 +124,42 @@ const BodyHome = () => {
         </div>
 
         <Container className={classes.cardGrid} maxWidth="md">
-          
-          <Grid id="about">  
+
+          <Grid id="about">
             <Typography component="h1" variant="h4" align="center" color="textPrimary" style={{width: '18vw', margin: 'auto'}} gutterBottom>
               A Propos
             </Typography>
             <Typography style={{marginLeft: '44%', marginTop: '3%', marginBottom: '3%', fontWeight: 'bold', width: '12%', justifyContent: 'center', borderBottom: '2px solid black'}}></Typography>
-            
+
             <Grid container spacing={4}>
-                
+
                 <Grid item xs={12} sm={6} md={6}>
                   <img src={AboutPic} alt="HomePicture" style={{width: '28vw', borderRadius: '1%'}} />
                 </Grid>
 
                 <Grid item xs={12} sm={6} md={6}>
-                  <Typography style={{ marginTop: '7%', }}>
+                  <Typography style={{ marginTop: '7%', marginLeft: '7%', }}>
                     Beaucoup d'entre nous ce sont déjà posés la question comment décorer sa maison correctement, sans pour autant déplacer physiquement ses meubles.
                     Voilà pourquoi nous avons créé Afro. Il s'agit d'une solution de suggestion d'ameublement créée par une équipe d'ingénieurs professionnels, issus de l'école Epitech Paris.
-                    Nous nous projettons sur un marché de niche en trois ans et nous sommes convaincus que nous allons réussir à motiver les gens à utiliser l'application. 
+                    Nous nous projettons sur un marché de niche en trois ans et nous sommes convaincus que nous allons réussir à motiver les gens à utiliser l'application.
                   </Typography>
                 </Grid>
 
-            </Grid> 
+            </Grid>
           </Grid>
-          
+
           <Divider style={{marginTop: '5%'}}/>
 
           <Grid style={{marginTop: '5%'}}>
-            
+
             <Typography component="h1" variant="h4" align="center" color="textPrimary" style={{width: '18vw', margin: 'auto'}} gutterBottom>
-              Mon Equipe
+              Notre Equipe
             </Typography>
             <Typography style={{marginLeft: '42%', marginTop: '3%', marginBottom: '3%', fontWeight: 'bold', width: '15%', justifyContent: 'center', borderBottom: '2px solid black'}}></Typography>
-            
+
             <Grid container spacing={4}>
-                
-              
+
+
                 <Grid item  xs={12} sm={6} md={4}>
                   <Card className={classes.card}>
                     <CardMedia
@@ -180,7 +185,7 @@ const BodyHome = () => {
                     </CardActions>
                   </Card>
                 </Grid>
-                
+
                 <Grid item  xs={12} sm={6} md={4}>
                   <Card className={classes.card}>
                     <CardMedia
@@ -206,7 +211,7 @@ const BodyHome = () => {
                     </CardActions>
                   </Card>
                 </Grid>
-              
+
                 <Grid item  xs={12} sm={6} md={4}>
                   <Card className={classes.card}>
                     <CardMedia
@@ -232,7 +237,7 @@ const BodyHome = () => {
                     </CardActions>
                   </Card>
                 </Grid>
-              
+
 
             </Grid>
           </Grid>
@@ -240,46 +245,81 @@ const BodyHome = () => {
           <Divider style={{marginTop: '5%'}}/>
 
           <Grid style={{marginTop: '5%'}}>
-            
+
             <Typography component="h1" variant="h4" align="center" color="textPrimary" style={{width: '18vw', margin: 'auto'}} gutterBottom>
               Contact
             </Typography>
             <Typography style={{marginLeft: '45%', marginTop: '3%', marginBottom: '3%', fontWeight: 'bold', width: '10%', justifyContent: 'center', borderBottom: '2px solid black'}}></Typography>
-            
-            <Grid container spacing={4}>
-                
-              
-                <Grid item  xs={12} sm={12} md={12}>
 
-                  <form className={classes.formroot} noValidate autoComplete="off">
-                    <div>
-                        <TextField required id="standard-required" label="Required" defaultValue="Nom User" />
-                        <TextField required id="standard-required" label="Required" defaultValue="Prenom User" />
-                        <TextField required id="standard-required" label="Required" defaultValue="Email User" />
-                    </div>
+            <Grid container spacing={3}>
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  required
+                  id="firstName"
+                  name="firstName"
+                  label="Nom"
+                  fullWidth
+                  autoComplete="given-name"
+                />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  required
+                  id="lastName"
+                  name="lastName"
+                  label="Prénom"
+                  fullWidth
+                  autoComplete="family-name"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  id="address1"
+                  name="address1"
+                  label="Adresse"
+                  fullWidth
+                  autoComplete="shipping address-line1"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  id="address2"
+                  name="address2"
+                  label="Sujet"
+                  fullWidth
+                  autoComplete="shipping address-line2"
+                />
+              </Grid>
 
-                    <div>
-                        <TextField required id="standard-required" label="Required" defaultValue="Numéro de Téléphone" />
-                    </div>
-
-                    <div>
-                        <TextareaAutosize aria-label="minimum height" rowsMin={3} columnsMin={8} placeholder="Contenu du message" />
-                    </div>
-                    
-                    <Button variant="contained" color="primary">
-                      Valider
-                    </Button>
-
-                  </form>
-
-                </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  id="address2"
+                  name="address2"
+                  label="Contenu"
+                  fullWidth
+                  autoComplete="shipping address-line2"
+                />
+              </Grid>
+              <Grid item xs={4}>
+                  <Button
+                    type="submit"
+                    fullWidth
+                    variant="contained"
+                    color="primary"
+                    className={classes.submit}
+                  >
+                    Envoyer
+                  </Button>
+              </Grid>
             </Grid>
+
           </Grid>
 
 
         </Container>
     </main>
-  );  
+  );
 }
 
 export default function Home() {
