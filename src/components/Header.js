@@ -81,7 +81,7 @@ const useStyles = makeStyles((theme) => ({
   },
   hide: {
     display: 'none',
-  },  
+  },
 }));
 
 const DrawerList = () => {
@@ -110,14 +110,14 @@ const DrawerList = () => {
       <Typography className={classes.title} variant="h6" noWrap>
         Afro-web
       </Typography>
-              
+
       <Drawer
         anchor='left'
         onClose={() => setOpenDrawer(false)}
         open={openDrawer}
       >
       <List>
-        
+
         <Link variant="button" color="textPrimary" href="/" style={{textDecoration: 'none', textTransform: 'capitalize', color: 'black'}}>
           <ListItem button>
             <ListItemIcon>
@@ -127,7 +127,7 @@ const DrawerList = () => {
           </ListItem>
         </Link>
 
-        <Link variant="button" color="textPrimary" to="#about" style={{textDecoration: 'none', textTransform: 'capitalize', color: 'black'}}>
+        {/*<Link variant="button" color="textPrimary" to="#about" style={{textDecoration: 'none', textTransform: 'capitalize', color: 'black'}}>
           <ListItem button>
             <ListItemIcon>
               <LabelImportantIcon color="action" />
@@ -135,7 +135,7 @@ const DrawerList = () => {
             <ListItemText primary="A Propos" />
           </ListItem>
         </Link>
-        
+
         <Link variant="button" color="textPrimary" to="#team" style={{textDecoration: 'none', textTransform: 'capitalize', color: 'black'}}>
           <ListItem button>
             <ListItemIcon>
@@ -143,7 +143,7 @@ const DrawerList = () => {
             </ListItemIcon>
             <ListItemText primary="Notre Equipe" />
           </ListItem>
-        </Link>
+        </Link>*/}
 
         <Link variant="button" color="textPrimary" href="/Tutorial" style={{textDecoration: 'none', textTransform: 'capitalize', color: 'black'}}>
           <ListItem button>
@@ -153,7 +153,7 @@ const DrawerList = () => {
             <ListItemText primary="Tutorial" />
           </ListItem>
         </Link>
-      </List>  
+      </List>
       </Drawer>
     </>
   );
@@ -170,7 +170,7 @@ export default function Header() {
     <div className={classes.root}>
       <AppBar position="static" >
         <Toolbar className={classes.MobileTransition}>
-          
+
           {isMatch ? <DrawerList /> : (
             <>
             <IconButton
@@ -188,20 +188,20 @@ export default function Header() {
             <Link variant="button" color="textPrimary" href="/" className={classes.link}>
               <Button size="large" className={classes.link}>Accueil</Button>
             </Link>
-            <Link variant="button" color="textPrimary" to="#about" className={classes.link}>
+            {/*<Link variant="button" color="textPrimary" to="#about" className={classes.link}>
               <Button size="large" className={classes.link}>A Propos</Button>
             </Link>
             <Link variant="button" color="textPrimary" to="#team" className={classes.link}>
               <Button size="large" className={classes.link}>Notre Equipe</Button>
-            </Link>
+            </Link>*/}
             <Link variant="button" color="textPrimary" href="/Tutorial" className={classes.link}>
               <Button size="large" className={classes.link}>Tutoriel</Button>
             </Link>
           </Box>
-          
+
           </>
           )}
-          
+
         </Toolbar>
       </AppBar>
     </div>

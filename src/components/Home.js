@@ -1,6 +1,7 @@
-import { React } from "react";
+import  React, { useRef } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
+import ScrollToTop from "./ScrollToTop";
 import Button from '@material-ui/core/Button';
 import CameraIcon from '@material-ui/icons/PhotoCamera';
 import Card from '@material-ui/core/Card';
@@ -31,6 +32,9 @@ import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
+
+import Carousel from '@brainhubeu/react-carousel';
+import '@brainhubeu/react-carousel/lib/style.css';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -79,7 +83,7 @@ const useStyles = makeStyles((theme) => ({
 
 const cards = [1, 2];
 
-
+//const NavTabs = ["About", "Team"];
 
 const BodyHome = () => {
 
@@ -111,9 +115,11 @@ const BodyHome = () => {
                       </Button>
                     </Grid>
                     <Grid item>
-                      <Button variant="outlined" color="primary">
-                        Consulter notre application
-                      </Button>
+                      <Link href="https://aphro-1d7e7.web.app/">
+                        <Button variant="outlined" color="primary">
+                          Consulter notre application
+                        </Button>
+                      </Link>
                     </Grid>
                   </Grid>
                 </div>
