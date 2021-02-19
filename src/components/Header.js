@@ -108,7 +108,7 @@ const DrawerList = () => {
         <MenuIcon />
       </IconButton>
       <Typography className={classes.title} variant="h6" noWrap>
-        Afro-web
+        Aphro-web
       </Typography>
 
       <Drawer
@@ -182,7 +182,7 @@ export default function Header() {
             <img src={ImgFile} alt="logo" />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
-            Afro-web
+            Aphro-web
           </Typography>
           <Box sm={12} className={classes.navtest}>
             <Link variant="button" color="textPrimary" href="/" className={classes.link}>

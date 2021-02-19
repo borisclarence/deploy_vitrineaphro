@@ -29,6 +29,9 @@ import PersonAddIcon from '@material-ui/icons/PersonAdd';
 import TabIcon from '@material-ui/icons/Tab';
 import ShareIcon from '@material-ui/icons/Share';
 
+import AutorenewIcon from '@material-ui/icons/Autorenew';
+import SettingsIcon from '@material-ui/icons/Settings';
+
 const useStyles = makeStyles((theme) => ({
   icon: {
     marginRight: theme.spacing(2),
@@ -73,16 +76,11 @@ const StepMobile = () => {
             <Typography variant="h6" component="h1">
               Etape 1
             </Typography>
-            <Typography>Cliquez sur le bouton pour aller sur la page des groupes.</Typography>
+            <Typography>Connexion à l'application.</Typography>
           </Paper>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
-        <TimelineOppositeContent>
-          <Typography variant="body2" color="textSecondary">
-            Page Groupes
-          </Typography>
-        </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineDot color="primary">
             <LaptopMacIcon />
@@ -94,14 +92,14 @@ const StepMobile = () => {
             <Typography variant="h6" component="h1">
               Etape 2
             </Typography>
-            <Typography>Cliquez sur l'icone plus pour ajouter un nouveau groupe.</Typography>
+            <Typography>Cliquer sur un objet et placer le sur les polygon.</Typography>
           </Paper>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
         <TimelineSeparator>
           <TimelineDot color="primary" variant="outlined">
-            <CardMembershipIcon />
+            <AutorenewIcon />
           </TimelineDot>
           <TimelineConnector className={classes.secondaryTail} />
         </TimelineSeparator>
@@ -110,14 +108,14 @@ const StepMobile = () => {
             <Typography variant="h6" component="h1">
               Etape 3
             </Typography>
-            <Typography>Cliquez sur le card pour aller dans les details du groupe. </Typography>
+            <Typography>Utiliser le plus et moins pour rotate. </Typography>
           </Paper>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
         <TimelineSeparator>
           <TimelineDot>
-            <PersonAddIcon />
+            <SettingsIcon />
           </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
@@ -126,7 +124,7 @@ const StepMobile = () => {
             <Typography variant="h6" component="h1">
               Etape 4
             </Typography>
-            <Typography>Cliquez sur le bouton en haut à droite pour ajouter un nouveau membre.</Typography>
+            <Typography>Cliquer sur le bouton violet pour accéder au settings</Typography>
           </Paper>
         </TimelineContent>
       </TimelineItem>

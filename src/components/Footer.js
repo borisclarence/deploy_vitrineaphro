@@ -18,7 +18,7 @@ function Copyright() {
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://material-ui.com/">
-        Afro-web
+        Aphro-web
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -47,7 +47,7 @@ const useStyles = makeStyles(theme => ({
       display: 'inline-block',
       marginLeft: 20,
       listStyle: 'none',
-      
+
     },
     contacts: {
       textAlign: 'justify'
@@ -82,10 +82,10 @@ const useStyles = makeStyles(theme => ({
         },
       },
   }));
-  
+
   const footers = [
     {
-      title: 'Afro-Team',
+      title: 'Aphro-Team',
       description: ['Based in Paris', '75015 Street', 'Kremlin-Bicêtre', 'Developpement Model'],
     },
     {
@@ -100,7 +100,7 @@ const useStyles = makeStyles(theme => ({
       title: 'Légal',
       description: ['Privacy policy', 'Terms of use'],
     },
-  ];  
+  ];
 
 export default function Footer() {
     const classes = useStyles();

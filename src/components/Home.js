@@ -16,7 +16,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
-import ImgHomeFile from '../assets/smartphone-app.png';
+import ImgHomeFile from '../assets/imageonline-co-add-text.png';
 import Divider from '@material-ui/core/Divider';
 import samuel from '../assets/samuel.png'
 import boris from '../assets/boris.png'
@@ -100,12 +100,12 @@ const BodyHome = () => {
               </Grid>
               <Grid item xs={12} sm={7} >
                 <Typography component="h1" variant="h4" align="justify" color="textPrimary" style={{width: '20vw',}} gutterBottom>
-                  Bienvenue sur Afro
+                  Bienvenue sur Aphro
                 </Typography>
                 <Typography variant="h6" align="justify" color="textSecondary" style={{width: '40vw', }} paragraph>
                   {/*Aphro est la première application de placements de meubles depuis votre téléphone*/}
-                  Aphro est une application AR permettant la création de decoration d'intérieur et le partage de ces dernière grâce à une web app.
-                  Il permet ainsi aux agents immobiliers, particuliers ou decorateurs d'intérieurs de partager leur vision d'un nouvel environement.
+                  Aphro est une application AR permettant la virtualisation de la décoration d'intérieur et le partage de cette dernière grâce à une web-app.
+                  Il permet ainsi aux agents immobiliers, particuliers ou décorateurs d'intérieur de partager leur vision d'un nouvel environement.
                 </Typography>
                 <div className={classes.heroButtons}>
                   <Grid container spacing={2} justify="center" style={{width: '35vw', }}>
@@ -146,7 +146,7 @@ const BodyHome = () => {
                 <Grid item xs={12} sm={6} md={6}>
                   <Typography style={{ marginTop: '7%', marginLeft: '7%', }}>
                     Beaucoup d'entre nous ce sont déjà posés la question comment décorer sa maison correctement, sans pour autant déplacer physiquement ses meubles.
-                    Voilà pourquoi nous avons créé Afro. Il s'agit d'une solution de suggestion d'ameublement créée par une équipe d'ingénieurs professionnels, issus de l'école Epitech Paris.
+                    Voilà pourquoi nous avons créé Aphro. Il s'agit d'une solution de suggestion d'ameublement créée par une équipe d'ingénieurs professionnels, issus de l'école Epitech Paris.
                     Nous nous projettons sur un marché de niche en trois ans et nous sommes convaincus que nous allons réussir à motiver les gens à utiliser l'application.
                   </Typography>
                 </Grid>
